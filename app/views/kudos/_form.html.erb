@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label :title %> 
     <%= form.text_field :title %>
   </div>
 
@@ -21,14 +21,10 @@
     <%= form.text_area :content %>
   </div>
 
-  <div class="field">
-    <%= form.label :giver %>
-    <%= form.text_field :giver %>
-  </div>
 
   <div class="field">
     <%= form.label :receiver_id %>
-    <%= form.text_field :receiver_id %>
+    <%= form.collection_select :receiver_id, Employee.where.not(id: current_employee.id), :id, :email %>
   </div>
 
   <div class="actions">
