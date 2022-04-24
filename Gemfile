@@ -25,8 +25,13 @@ group :development, :test do
   gem 'rubocop', '1.25.1'
   gem 'rubocop-rails', '2.13.2'
   gem 'rubocop-rspec', '2.8.0'
+  gem "factory_bot_rails"
   # Tests
   gem 'rspec-rails', '~> 5.0.0'
+end
+
+group :test do
+  gem 'capybara'
 end
 
 group :development do
